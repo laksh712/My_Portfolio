@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Typical from 'react-typical';
+import { TypeAnimation } from 'react-type-animation';
 // import './Home.css';
 
 const Home = () => {
@@ -61,10 +61,10 @@ const Home = () => {
                 transition={{ duration: 1, delay: 0.5 }}
                 style={{ fontSize: '1.5rem', marginBottom: '20px', color: '#ffffff' }}
             >
-                <Typical
-                    steps={['Java', 5000, 'React', 5000, 'AWS', 5000, 'MySQL', 5000]}
-                    loop={Infinity}
-                    wrapper="span"
+                <TypeAnimation
+                    sequence={['Developer', 1000, 'Engineer', 1000]}
+                    speed={50}
+                    repeat={Infinity}
                 />
             </motion.div>
 
@@ -160,7 +160,7 @@ const Home = () => {
                     Chat💬
                 </button>
                 {chatOpen && (
-                     // eslint-disable-next-line
+                    // eslint-disable-next-line
                     <iframe
                         src="https://chatting-liard-beta.vercel.app/"
                         style={{
